@@ -1,0 +1,19 @@
+﻿<Window x:Class="Dropbox_ControlWork.DropboxWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Dropbox_ControlWork"
+        mc:Ignorable="d"
+        Title="DropboxWindow" Height="450" Width="800">
+    <Grid>
+        <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth2" Grid.Column="1" Height="280" Padding="10" Margin="30">
+            <StackPanel>
+                <ListBox Name="listFiles" Height="150" VerticalAlignment="Top" SelectionChanged="ListFilesSelectionChanged"></ListBox>
+                <Button Width="200" Content="Скачать с облака" Margin="10" Click="UploadCloud"></Button>
+                <Button Width="200" Content="Загрузить в облако" Margin="10" Click="DownloadCloud"></Button>
+            </StackPanel>
+        </materialDesign:Card>
+    </Grid>
+</Window>
