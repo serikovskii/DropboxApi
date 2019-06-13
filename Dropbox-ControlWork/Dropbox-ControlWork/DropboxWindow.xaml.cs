@@ -26,14 +26,14 @@ namespace Dropbox_ControlWork
             InitializeComponent();
             Run();
         }
-        
+
 
         public async void Run()
         {
             using (var dbx = new DropboxClient("tAGRkUNmw2sAAAAAAAAE0GKGtkDkQPwMhfcr9Xr3wtwVXyWieZy-t8G31JlU9MsM"))
             {
                 var list = await dbx.Files.ListFolderAsync(string.Empty);
-                
+
                 foreach (var item in list.Entries.Where(i => i.IsFile))
                 {
                     listFiles.Items.Add(item.Name);
@@ -74,12 +74,17 @@ namespace Dropbox_ControlWork
 
         private void DownloadCloud(object sender, RoutedEventArgs e)
         {
-            Download();
+            Upload();
         }
 
         private void UploadCloud(object sender, RoutedEventArgs e)
         {
-            Upload();
+            Download();
+        }
+
+        private void Update(object sender, RoutedEventArgs e)
+        {
+            Run();
         }
     }
 }

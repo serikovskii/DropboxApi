@@ -31,9 +31,6 @@
                 <Button Name="signUpButton" Content="Регистрация" Margin="10" Click="SignUpButtonClick" BorderBrush="{x:Null}"
                         Style="{StaticResource MaterialDesignRaisedDarkButton}"
                         ToolTip="Resource name: MaterialDesignRaisedLightDarkButton"/>
-                <Button Name="dropbox" Content="dropbox" Margin="10" Click="DropboxClick" BorderBrush="{x:Null}"
-                        Style="{StaticResource MaterialDesignRaisedDarkButton}"
-                        ToolTip="Resource name: MaterialDesignRaisedLightDarkButton"/>
             </StackPanel>
         </materialDesign:Card>
 

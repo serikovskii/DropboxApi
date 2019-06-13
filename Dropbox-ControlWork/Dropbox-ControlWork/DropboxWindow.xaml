@@ -8,9 +8,10 @@
         mc:Ignorable="d"
         Title="DropboxWindow" Height="450" Width="800">
     <Grid>
-        <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth2" Grid.Column="1" Height="280" Padding="10" Margin="30">
+        <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth2" Grid.Column="1" Height="350" Padding="10" Margin="30">
             <StackPanel>
                 <ListBox Name="listFiles" Height="150" VerticalAlignment="Top" SelectionChanged="ListFilesSelectionChanged"></ListBox>
+                <Button Width="200" Content="Обновить" Margin="10" Click="Update"></Button>
                 <Button Width="200" Content="Скачать с облака" Margin="10" Click="UploadCloud"></Button>
                 <Button Width="200" Content="Загрузить в облако" Margin="10" Click="DownloadCloud"></Button>
             </StackPanel>

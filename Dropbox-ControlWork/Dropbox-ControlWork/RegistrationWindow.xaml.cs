@@ -27,10 +27,18 @@ namespace Dropbox_ControlWork
 
         private void SignUpButtonClick(object sender, RoutedEventArgs e)
         {
-            var login = loginTextBox.Text;
-            var password = passwordBox.Password;
-            var confirmedPassword = confirmedPasswordBox.Password;
+            Task.Run(() => AddToDatabase());
+        }
 
+        public async void AddToDatabase()
+        {
+            string login="";
+            string password = "";
+            string confirmedPassword = "";
+            Dispatcher.Invoke(() => login = loginTextBox.Text);
+            Dispatcher.Invoke(() => password = passwordBox.Password);
+            Dispatcher.Invoke(() => confirmedPassword = confirmedPasswordBox.Password);
+            
             var loginLengt = 5;
             var passwordLengt = 8;
 
@@ -71,7 +79,7 @@ namespace Dropbox_ControlWork
                         Login = login,
                         Password = EncryptionService.HashPassword(password)
                     });
-                    context.SaveChanges();
+                    await context.SaveChangesAsync();
 
                     MessageBox.Show("Успешно добавлено!");
 
@@ -83,8 +91,6 @@ namespace Dropbox_ControlWork
                 }
             }
         }
-
-        
 
         private void WindowClosing(object sender, RoutedEventArgs e)
         {

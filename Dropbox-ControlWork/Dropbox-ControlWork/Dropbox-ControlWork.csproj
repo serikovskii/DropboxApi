@@ -83,7 +83,6 @@
       <DependentUpon>DropboxWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="EncryptionService.cs" />
-    <Compile Include="FullAccount.cs" />
     <Compile Include="RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>

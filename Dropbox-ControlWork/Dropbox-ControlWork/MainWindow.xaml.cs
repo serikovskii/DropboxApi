@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Dropbox_ControlWork
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -47,7 +44,10 @@ namespace Dropbox_ControlWork
                 }
                 else
                 {
-                    MessageBox.Show("Успешный вход!");
+                    DropboxWindow dropbox = new DropboxWindow();
+                    dropbox.Show();
+
+                    Close();
                 }
             }
         }
